@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form validation</title>
+	<script type="text/javascript"></script>
+</head>
+<body>
+<style type="text/css">
+body{
+
+	background: linear-gradient(to right, #ffa17f, #00223e);
+}
+	
+div{
+	background: linear-gradient(to right, #f1f2b5, #135058);
+	border-radius: 10px;
+	width: 1000px;
+	height: 400px;
+	margin-left: 180px;
+	margin-top: 0px;
+	border: solid black;
+}
+p{
+	margin-top: 100px;
+	font-family: sans-serif;
+	font-size: 250%;
+}
+#usr{
+	border-radius: 5px;
+	width: 200px;
+	height: 30px;
+	margin-left: 30px;
+	text-align: center;
+	margin-top:130px;
+
+}
+#psd{
+	border-radius: 5px;
+	text-align: center;
+	margin-left: 35px;
+	margin-top: 5px;
+	width: 200px;
+	height: 30px;
+}
+#sbmt{
+	border-radius: 5px;
+	text-align: center;
+	margin-left: 60px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 30px;
+	width: 80px;
+}
+span{
+	margin-left: 150px;
+	font-family: serif;
+}
+a#id{
+	margin-left: 150px;
+}
+a#id2{
+	margin-left: 195px;
+}
+
+</style>
+<p align="center"><b>FORM VALIDATION</b></p>
+<div>
+<form name="myform" onsubmit="return validateform()">
+<span><b>USER NAME:</b></span><input type="text" name="username" placeholder="username@ex:prashanth111" required="required" id="usr" pattern="[A-Za-z]{6,}" title="Check the rules below"><br>
+<span><b>PASSWORD:</b></span><input type="password" name="password" placeholder="password:&#9679&#9679&#9679&#9679&#9679&#9679&#9679&#9679" required="required" id="psd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Check the rules below"><br>
+<span><b>SUBMIT FORM:</b></span><input type="submit" name="submitform" required="required" class="cls" id="sbmt">
+<br>
+<a id="id"><b>Rules:1)User name must be 6 or more characters either small or capital ,digits or special symbols not allowed </b></a>
+<a id="id2"><b>2)Password must contains one capital letter,one small letter ,one digit and length can  be 8 or more</b></a>
+</form>
+</div>
+<script type="text/javascript">
+function validateform() 
+{
+	var x = document.forms["myform"]["username"].value;
+	var y= document.forms["myform"]["password"].value;
+	alert("Username:" +x);
+	alert("Password:"+y);
+	alert("saved successfully!")
+ }
+
+</script>
+</body>
+</html>
